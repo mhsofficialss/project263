@@ -71,6 +71,32 @@
           <div id="even-odd-result" class="result" aria-live="polite">Your answer will appear here.</div>
         </article>
       </div>
+      
+<article class="tool-card">
+  <div class="tool-icon purple">🎓</div>
+  <h3>Grade Calculator</h3>
+  <p>Enter your marks to calculate your grade.</p>
+
+  <form id="grade-form" class="tool-form">
+    <label for="marks">Enter your marks (0–100)</label>
+    <input
+      id="marks"
+      type="number"
+      min="0"
+      max="100"
+      step="1"
+      placeholder="e.g. 75"
+      required
+    >
+    <button class="primary-button full" type="submit">
+      Calculate Grade
+    </button>
+  </form>
+
+  <div id="grade-result" class="result" aria-live="polite">
+    Your grade will appear here.
+  </div>
+</article>
     </section>
 
     <section id="about" class="about-section">
