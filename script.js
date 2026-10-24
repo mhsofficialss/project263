@@ -74,3 +74,42 @@ document.getElementById("even-odd-form").addEventListener("submit", (event) => {
   const kind = number % 2 === 0 ? "Even" : "Odd";
   showResult("even-odd-result", `<strong>${number}</strong> is an <strong>${kind} number</strong>.`);
 });
+
+document.getElementById("grade-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const marksInput = document.getElementById("marks");
+  const marks = Number(marksInput.value);
+
+  if (
+    marksInput.value.trim() === "" ||
+    !Number.isInteger(marks) ||
+    marks < 0 ||
+    marks > 100
+  ) {
+    showResult("grade-result", "Enter a whole number from 0 to 100.", false);
+    return;
+  }
+
+  let grade;
+
+  if (marks < 40) {
+    grade = "F (Fail)";
+  } else if (marks < 50) {
+    grade = "D";
+  } else if (marks < 60) {
+    grade = "C";
+  } else if (marks < 70) {
+    grade = "B";
+  } else if (marks < 80) {
+    grade = "A";
+  } else {
+    grade = "A+";
+  }
+
+  showResult(
+    "grade-result",
+    `Your marks: <strong>${marks}</strong><br>
+     Your grade: <strong>${grade}</strong>`
+  );
+});
