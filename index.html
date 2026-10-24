@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online programming tools: age calculator, rectangle calculator, and even or odd checker.">
+  <title>CodeTools — Programming Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">&lt;/&gt;</span> CodeTools</a>
+    <nav aria-label="Main navigation">
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">SIMPLE • FREE • USEFUL</div>
+      <h1>Your everyday <span>programming tools.</span></h1>
+      <p>Quick, simple calculators and coding helpers — all in one place.</p>
+      <a class="primary-button" href="#tools">Explore tools <span aria-hidden="true">↓</span></a>
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+    </section>
+
+    <section id="tools" class="tools-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">TOOLBOX</div><h2>Choose a tool</h2></div>
+        <p>Pick a tool, enter your values, and get your result instantly.</p>
+      </div>
+
+      <div class="tool-grid">
+        <article class="tool-card">
+          <div class="tool-icon purple">🎂</div>
+          <h3>Age Calculator</h3>
+          <p>Calculate your age from your date of birth.</p>
+          <form id="age-form" class="tool-form">
+            <label for="birth-date">Date of birth</label>
+            <input id="birth-date" type="date" required>
+            <button class="primary-button full" type="submit">Calculate age</button>
+          </form>
+          <div id="age-result" class="result" aria-live="polite">Your age will appear here.</div>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon blue">📐</div>
+          <h3>Rectangle Calculator</h3>
+          <p>Find the area and perimeter of a rectangle.</p>
+          <form id="rectangle-form" class="tool-form">
+            <label for="length">Length</label>
+            <input id="length" type="number" min="0" step="any" placeholder="Enter length" required>
+            <label for="width">Width</label>
+            <input id="width" type="number" min="0" step="any" placeholder="Enter width" required>
+            <button class="primary-button full" type="submit">Calculate</button>
+          </form>
+          <div id="rectangle-result" class="result" aria-live="polite">Area and perimeter will appear here.</div>
+        </article>
+
+        <article class="tool-card">
+          <div class="tool-icon green">🔢</div>
+          <h3>Even / Odd Checker</h3>
+          <p>Check whether a whole number is even or odd.</p>
+          <form id="even-odd-form" class="tool-form">
+            <label for="number">Whole number</label>
+            <input id="number" type="number" step="1" placeholder="e.g. 25" required>
+            <button class="primary-button full" type="submit">Check number</button>
+          </form>
+          <div id="even-odd-result" class="result" aria-live="polite">Your answer will appear here.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-symbol">&lt;/&gt;</div>
+      <div>
+        <div class="eyebrow">ABOUT CODETOOLS</div>
+        <h2>Small tools. Fast answers.</h2>
+        <p>CodeTools is a beginner-friendly collection of simple online tools built for students and everyday calculations. More tools can be added as you learn.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> CodeTools. All rights reserved.</span>
+    <span>Made for learners, with care.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
